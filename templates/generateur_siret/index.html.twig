@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Générateur de Numéro de Siret{% endblock %}
+
+{% block body %}
+
+    {# Entête de la page   #}
+    <header class="row mt-3">
+
+        <h4 class="col-8 d-flex flex-column m-auto py-3 text-center header-color">Simulateur de nom et de numéro de
+            Siret de
+            société pour des besoins de tests</h4>
+    </header>
+
+    {# Corps de la page #}
+    <main class="row">
+
+        <div class="col-8 d-flex flex-column m-auto py-3"
+             style="box-shadow: 0 1px 2px #D2D2D2; border-radius: 0 0 20px 20px;">
+
+            {# Affichage du numéro de Siret #}
+            <div class="m-auto p-5">
+
+                <h2 class="p-2">Société factice :</h2>
+
+                <p class="pt-2">Nom de Société factice :</p>
+                <input id="champ_societe" class="border p-2 text-center font-weight-bold block" type="text"
+                       value="{{ nom_societe | capitalize }}"/>
+
+                {# Icône de pour copier le champ nom de la Société #}
+                <span>
+                    <span id="nom_societe" class="fa-stack fa-1x icon_fa">
+                    <i class="fa fa-solid fa-copy fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span id="errornamesociete" class="champ_copy text-center p-2 invisible"></span>
+                </span>
+
+                <p class=" pt-2">Numéro de Siret factice :</p>
+                <input id="champ_siret" class="border p-2 text-center font-weight-bold" type="text"
+                       value="{{ siret }}"/>
+
+                {# Icône de pour copier le champ Siret #}
+                <span>
+                       <span id="numero_siret" class="fa-stack fa-1x icon_fa">
+                        <i class="fa fa-solid fa-copy fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span id="errornamesiret" class="champ_copy text-center p-2 invisible"></span>
+                    </span>
+
+            </div>
+
+            {# Bouton de génération d'un numéro de Siret #}
+            <div class="col8 d-flex flex-column m-auto py-3">
+
+                <a id="btn_generator" href="{{ path('societe_siret') }}"
+                   class="btn btn-valid icon text-white font-weight-bold">
+                    <i class="fa fa-plus-circle"></i> Générer une nouvelle Société / Siret
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+{% endblock %}

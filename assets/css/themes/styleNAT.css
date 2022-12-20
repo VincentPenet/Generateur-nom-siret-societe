@@ -1,0 +1,26 @@
+.header-color {
+    background-color: #1A3861 !important;
+    font-size: 30px;
+    box-shadow: 0 1px 2px #D2D2D2;
+    border-radius: 20px 20px 0 0;
+    color: white;
+}
+
+.icon {
+    background-color: #1A3861 !important;
+    font-size: 20px !important;
+    border-radius: 20px !important;
+}
+
+.icon_fa {
+    background-color: #1A3861;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.champ_copy {
+    color: black;
+    background-color: lightgreen;
+    border-radius: 20px !important;
+}
